@@ -31,5 +31,5 @@ export default async function menusItemsController(req, res) {
     })
   );
 
-  res.send(menusItems);
+  res.send({ success: true, data: menusItems });
 }

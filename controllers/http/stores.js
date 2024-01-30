@@ -8,5 +8,5 @@ export default async function storesController(req, res) {
     name,
   }));
 
-  res.send(sanitizedStores);
+  res.send({ success: true, data: sanitizedStores });
 }

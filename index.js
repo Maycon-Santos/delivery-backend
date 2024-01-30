@@ -28,6 +28,7 @@ import deliverymanWSController from "./controllers/ws/deliveryman.js";
 import authMiddlewareWs from "./middlewares/ws/auth.js";
 import storeWSController from "./controllers/ws/store.js";
 import allowUserTypesMiddlewareWs from "./middlewares/ws/allowUserTypes.js";
+import storeController from "./controllers/http/store.js";
 
 const app = express();
 const expressWs = ExpressWs(app);
@@ -46,6 +47,7 @@ app.post("/login-user", loginUserController);
 // Store
 app.post("/register-store", registerStoreController);
 app.post("/login-store", loginStoreController);
+app.get("/store/:store_id", storeController);
 
 // Deliveryman
 app.post("/register-deliveryman", registerDeliveryManController);
